@@ -125,6 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
             cards[secondOptionId].removeEventListener("click", flipCard);
             cardsCorrect.push(cardsPicked);
             movesCounter();
+        } else {
+            cards[firstOptionId].setAttribute("src", "./assets/images/play-cards/card-back.png");
+            cards[secondOptionId].setAttribute("src", "./assets/images/play-cards/card-back.png");
+            movesCounter();
         }
+        //remove chosen cards
+        cardsPicked = [];
+        cardsPickedId = [];
+
+        //score changes every time there is a match
+        score.textContent = cardsCorrect.length;
+
     }
 });
