@@ -1,6 +1,7 @@
 /*Imported google fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
     background: white;
@@ -8,6 +9,9 @@ body {
 
 h1 {
     font-family: Permanent Marker;
+}
+h2, .rules, .points {
+    font-family: Pacifico;
 }
 #top-section {
     text-align: center;
@@ -24,12 +28,12 @@ h1 {
 
 .points {
     display: inline-block;
-    padding: 30px;
+    
 
 }
 #playground {
-    width:620px;
-    height:415px;
+    width:630px;
+    height:425px;
     margin: auto;
 }
 #reset {
@@ -38,4 +42,10 @@ h1 {
 #reset-button {
     background-color: white;
     font-size: larger;
+    border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+    
+}
+footer {
+    text-align: center;
 }
