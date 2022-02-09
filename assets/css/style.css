@@ -9,3 +9,7 @@ body {
 h1 {
     font-family: Permanent Marker;
 }
+#top-section {
+    text-align: center;
+    font-size: larger;
+}
