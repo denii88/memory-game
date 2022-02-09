@@ -155,4 +155,20 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(checkMatch, 300);
         }
     }
+
+   //reset the game
+
+   reset.addEventListener("click", resetEverything);
+   function resetEverything() {
+       playground.innerHTML = "";
+       document.getElementById("message").innerHTML = "";
+       cardList.sort(() => 0.5 - Math.random());
+       createPlayground(playground, cardList);
+       cardsCorrect = [];
+       score.innerHTML = 0;
+       cardsPicked = [];
+       cardsPickedId = [];
+       movesCount.innerHTML = 0;
+       moves = 0;
+   }
 });
