@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const playground = document.querySelector("#playground");
     const score = document.querySelector("#total");
     const movesCount = document.querySelector("#moves");
-    const reset = document.getDocumentById("reset-button");
+    const reset = document.getElementById("reset-button");
     let moves = 0;
 
     let cardsPicked = [];
@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //setting attributes,iteration and adding back of the card,creating new element of image of card back
 
-    function startGame () {
-        for (let i = 0; i < cardList.length; i++) {
+    function createPlayground () {
+        for (let i = 0; i < cardList.length;i++) {
             const card = document.createElement("img");
             card.setAttribute("src", "./assets/images/play-cards/card-back.png");
             card.setAttribute("class", "play-card");
@@ -138,14 +138,14 @@ document.addEventListener("DOMContentLoaded", () => {
         //message when all cards are matched
 
         if(cardsCorrect.lenght === cardList.lenght/2) {
-            document.getElementById("message").innerHTML = "Well done, you matched all cards !";
+            document.getElementById("message").innerHTML = "Well done, you matched all cards!";
         }
 
     }
 
     //flip cards when user selects them
-    function flipCard(){
-        letcardId = this.getAttribute("data-id");
+    function flipCard() {
+        let cardId = this.getAttribute("data-id");
         cardsPicked.push(cardList[cardId].name);
         cardsPickedId.push(cardId);
         this.setAttribute("src", cardList[cardId].img);
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
        playground.innerHTML = "";
        document.getElementById("message").innerHTML = "";
        cardList.sort(() => 0.5 - Math.random());
-       createPlayground(playground, cardList);
+       createGame(playground, cardList);
        cardsCorrect = [];
        score.innerHTML = 0;
        cardsPicked = [];
