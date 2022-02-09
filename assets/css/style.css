@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
 body {
-    background: #00fa9a;
+    background: white;
 }
 
 h1 {
@@ -41,10 +41,14 @@ h2, .rules, .points {
 #reset-button {
     background-color: white;
     font-size: larger;
-    border: 1px solid black;
+    border: 0.5px solid black;
     padding: 10px 15px 10px 15px;
     font-family: Kanit;
 }
 footer {
     text-align: center;
+}
+.play-card {
+    width:120px;
+    height:140px;
 }
