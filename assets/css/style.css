@@ -2,9 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
 body {
-    background: white;
+    background: #00fa9a;
 }
 
 h1 {
@@ -44,7 +45,7 @@ h2, .rules, .points {
     font-size: larger;
     border: 1px solid black;
     padding: 10px 15px 10px 15px;
-    
+    font-family: Kanit;
 }
 footer {
     text-align: center;
