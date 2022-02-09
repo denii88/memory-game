@@ -171,4 +171,12 @@ document.addEventListener("DOMContentLoaded", () => {
        movesCount.innerHTML = 0;
        moves = 0;
    }
+    
+   //moves counter
+   function movesCounter () {
+       movesCount.innerHTML ++;
+       moves ++;
+   }
+
+   createPlayground();
 });
