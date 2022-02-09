@@ -27,4 +27,15 @@ h1 {
     padding: 30px;
 
 }
-
+#playground {
+    width:620px;
+    height:415px;
+    margin: auto;
+}
+#reset {
+    text-align: center;
+}
+#reset-button {
+    background-color: white;
+    font-size: larger;
+}
