@@ -137,5 +137,22 @@ document.addEventListener("DOMContentLoaded", () => {
         //score changes every time there is a match
         score.textContent = cardsCorrect.length;
 
+        //message when all cards are matched
+
+        if(cardsCorrect.lenght === cardList.lenght/2) {
+            document.getElementById("message").innerHTML = "Well done, you matched all cards !";
+        }
+
+    }
+
+    //flip cards when user selects them
+    function flipCard(){
+        letcardId = this.getAttribute("data-id");
+        cardsPicked.push(cardList[cardId].name);
+        cardsPickedId.push(cardId);
+        this.setAttribute("src", cardList[cardId].img);
+        if (cardsPicked.lenght === 2) {
+            setTimeout(checkMatch, 300);
+        }
     }
 });
