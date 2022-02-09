@@ -4,6 +4,23 @@ const cardList = [
         img:".assets/images/play-cards/arsenal.png"
     },
     {
-        
+        name:"bayern",
+        img:".assets/images/play-cards/bayern.png"
+    },
+    {
+        name:"liverpool",
+        img:".assets/images/play-cards/liverpool.png"
+    },
+    {
+        name:"man-united",
+        img:".assets/images/play-cards/man-united.png"
+    },
+    {
+        name:"osijek",
+        img:".assets/images/play-cards/osijek.png"
+    },
+    {
+        name:"real-madrid",
+        img:".assets/images/play-cards/real-madrid.png"
     }
-]
+];
