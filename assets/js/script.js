@@ -1,7 +1,5 @@
 //used const variable to add all photos,except card back,which will go later to the if else function in checking for match
 document.addEventListener("DOMContentLoaded", () => {
-
-
     const cardList = [
         {
             name:"arsenal",
@@ -85,20 +83,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
+    //machine to random place cards on screen
+    cardList.sort(() => 0.5 - Math.random());
+    
     //constants for the game,moves,score and reset
 
     const playground = document.querySelector("#playground");
-    const reset = document.querySelector("reset-button");
     const score = document.querySelector("#total");
     const movesCount = document.querySelector("#moves");
+    const reset = document.getDocumentById("reset-button");
     let moves = 0;
 
     let cardsPicked = [];
     let cardsPickedId = [];
     let cardsCorrect = [];
-
-    //machine to random place cards on screen
-    cardList.sort(() => 0.5 - Math.random());
 
     //setting attributes,iteration and adding back of the card,creating new element of image of card back
 
