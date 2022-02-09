@@ -49,38 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             name:"real-madrid",
             img:"./assets/images/play-cards/real-madrid.png"
         },
-        {
-            name:"rovers",
-            img:"./assets/images/play-cards/rovers.png"
-        },
-        {
-            name:"valencia",
-            img:"./assets/images/play-cards/valencia.png"
-        },
-        {
-            name:"westham",
-            img:"./assets/images/play-cards/westham.png"
-        },
-        {
-            name:"celtic",
-            img:"./assets/images/play-cards/celtic.png"
-        },
-        {
-            name:"rovers",
-            img:"./assets/images/play-cards/rovers.png"
-        },
-        {
-            name:"valencia",
-            img:"./assets/images/play-cards/valencia.png"
-        },
-        {
-            name:"westham",
-            img:"./assets/images/play-cards/westham.png"
-        },
-        {
-            name:"celtic",
-            img:"./assets/images/play-cards/celtic.png"
-        }
+        
     ];
 
     //machine to random place cards on screen
@@ -150,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cardsPickedId.push(cardId);
         this.setAttribute("src", cardList[cardId].img);
         if (cardsPicked.lenght === 2) {
-            setTimeout(checkMatch, 300);
+            setTimeout(checkMatch, 100);
         }
     }
 
@@ -161,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
        playground.innerHTML = "";
        document.getElementById("message").innerHTML = "";
        cardList.sort(() => 0.5 - Math.random());
-       createGame(playground, cardList);
+       createPlayground(playground, cardList);
        cardsCorrect = [];
        score.innerHTML = 0;
        cardsPicked = [];
