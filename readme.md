@@ -17,3 +17,14 @@
 
 
 ![footer](./assets/images/readme-images/features.png)
+
+# User Eperience
+It is divided on three smaller sections,one for the first time users, one for the regular users and one for the owner.
+
+### First-time users 
+
+1. As a first-time user,I want to understand what the game goal is.
+2. As a first-time user,I want to know the game rules.
+3. As a first time user,I want to challenge my memory.
+4. As a first-time user,I want to be able to navigate the page without long waiting time.
+5. As a firt-time user,I want to see how long does it take me to complete the game.
