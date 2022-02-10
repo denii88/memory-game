@@ -32,8 +32,9 @@ h2, .rules, .points {
 }
 #playground {
     width:630px;
-    height:425px;
+    height:500px;
     margin: auto;
+    text-align: center;
 }
 #reset {
     text-align: center;
@@ -49,6 +50,6 @@ footer {
     text-align: center;
 }
 .play-card {
-    width:120px;
-    height:140px;
+    width:110px;
+    height:110px;
 }
