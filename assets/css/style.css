@@ -31,8 +31,8 @@ h2, .rules, .points {
 
 }
 #playground {
-    width:60%;
-    height:400px;
+    width:640px;
+    height:500px;
     margin: auto;
     text-align: center;
 }
@@ -54,6 +54,28 @@ footer {
     text-align: center;
 }
 .play-card {
-    width:110px;
-    height:110px;
+    width:100px;
+    height:100px;
+}
+@media (max-width:480px) {
+    #playground {
+        width:100%
+    }
+}
+@media (max-width:576px) {
+    #playground {
+        width:100%
+    }
+}
+
+@media (max-width:768px) {
+    #playground {
+        width:100%;
+    }
+}
+
+@media (max-width:1200px) {
+    #playground {
+        width:100%;
+    }
 }
