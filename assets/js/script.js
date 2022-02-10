@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let cardsPickedId = [];
     let cardsCorrect = [];
 
-    //setting attributes,iteration and adding back of the card,creating new element of image of card back
+    //setting attributes,iteration and adding back of the card,creating new element of image of card back, Credits : Ania Kubow.
 
     function createPlayground () {
         for (let i = 0; i < cardList.length; i++) {
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //checking does the cards which user selected match
+    //checking does the cards which user selected match, Credits : GitHub user michelle 3334
 
     function checkMatch () {
         const cards = document.querySelectorAll("img");
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cards[secondOptionId].setAttribute("src", "./assets/images/play-cards/card-back.png");
             movesCounter();
         }
-        //remove chosen cards
+        //remove chosen cards Credit : Stackoverflow
         cardsPicked = [];
         cardsPickedId = [];
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
         }
 
-    //flip cards when user selects them
+    //flip cards when user selects them, Credit : CodeOpen user : Jacob Oakley
     function flipCard() {
         let cardId = this.getAttribute("data-id");
         cardsPicked.push(cardList[cardId].name);
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-   //reset the game
+   //reset the game, Credits : GitHub user michelle 3334
 
     reset.addEventListener("click", resetEverything);
     function resetEverything() {
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
        moves = 0;
    }
     
-   //moves counter
+   //moves counter, ultimate moves counter, Credit Stackoverflow
     function movesCounter () {
        movesCount.innerHTML ++;
        moves ++;

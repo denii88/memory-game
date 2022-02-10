@@ -95,4 +95,11 @@ function movesCounter () {
 
 ## Deployment
 
-*
+* I have deployed site to the GitHub pages and steps to get to my work are following:
+
+1. In the GitHub repository, go to the Settings tab
+2. From the section of drop-down menu,choose the master branch
+3. Once the master branch was selected, the page will be shown.
+
+* Live website link can be found here too :
+[Github](https://www.github.com)
