@@ -32,9 +32,10 @@ h2, .rules, .points {
 }
 #playground {
     width:640px;
-    height:500px;
+    height:370px;
     margin: auto;
     text-align: center;
+    
 }
 #reset {
     text-align: center;
