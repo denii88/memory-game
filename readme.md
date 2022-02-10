@@ -1,2 +1,2 @@
 # Football clubs memory game
-![Alt text](./assets/images/play-cards/readme-images/ "Title")
+![amiresponsive](./assets/images/readme-images/responsive.png)
