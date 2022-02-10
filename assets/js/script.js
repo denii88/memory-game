@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
         }
 
-    //flip cards when user selects them, Credit : CodeOpen user : Jacob Oakley
+    //flip cards when user selects them, Credit : CodePen user : Jacob Oakley
     function flipCard() {
         let cardId = this.getAttribute("data-id");
         cardsPicked.push(cardList[cardId].name);

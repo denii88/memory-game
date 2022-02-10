@@ -1,5 +1,7 @@
 # Football clubs memory game
 ![amiresponsive](./assets/images/readme-images/responsive.png)
+
+[Football Memory Card Game](https://denii88.github.io/memory-game/)
 # Project goals
 ### Website owner goals
 * I want users to be able to play fun and enjoyable game
@@ -102,4 +104,11 @@ function movesCounter () {
 3. Once the master branch was selected, the page will be shown.
 
 * Live website link can be found here too :
-[Github](https://www.github.com)
+[Football Memory Card Game](https://denii88.github.io/memory-game/)
+
+## Credits 
+
+* I had issues with writing functions and they did't work so I had to implement some if other's functions into my work.
+* In any case I didn't cpoy/paste anyone elses work, I used my ids and clases and elements.
+* Mostly I was using Stackoverflow, CodePen and user Jacob Oakley,
+software developer Ania Kubow, and the git hub user michelle 3334.
