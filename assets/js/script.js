@@ -58,22 +58,22 @@ document.addEventListener("DOMContentLoaded", () => {
     //constants for the game,moves,score and reset
 
     const playground = document.querySelector("#playground");
-    const score = document.querySelector("#total");
+    const score = document.querySelector("#result");
     const movesCount = document.querySelector("#moves");
     const reset = document.getElementById("reset-button");
     let moves = 0;
 
-    let cardsPicked = [];
-    let cardsPickedId = [];
-    let cardsCorrect = [];
+    let cardsChosen = [];
+    let cardsChosenId = [];
+    let cardsRight = [];
 
     //setting attributes,iteration and adding back of the card,creating new element of image of card back
 
     function createPlayground () {
-        for (let i = 0; i < cardList.length;i++) {
+        for (let i = 0; i < cardList.length; i++) {
             const card = document.createElement("img");
             card.setAttribute("src", "./assets/images/play-cards/card-back.png");
-            card.setAttribute("class", "play-card");
+            card.setAttribute("class", "game-card");
             card.setAttribute("data-id", i);
             card.addEventListener("click", flipCard);
             playground.appendChild(card);
@@ -84,63 +84,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function checkMatch () {
         const cards = document.querySelectorAll("img");
-        const firstOptionId = cardsPickedId[0];
-        const secondOptionId = cardsPickedId[1];
+        const optionOneId = cardsChosenId[0];
+        const optionTwoId = cardsChosenId[1];
 
-        if (cardsPicked[0] === cardsPicked[1] && cardsPickedId[0] !== cardsPickedId[1]) {
-            cards[firstOptionId].removeEventListener("click", flipCard);
-            cards[secondOptionId].removeEventListener("click", flipCard);
-            cardsCorrect.push(cardsPicked);
+        if (cardsChosen[0] === cardsChosen[1] && cardsChosenId[0] !== cardsChosenId[1]) {
+            cards[optionOneId].removeEventListener("click", flipCard);
+            cards[optionTwoId].removeEventListener("click", flipCard);
+            cardsRight.push(cardsChosen);
             movesCounter();
         } else {
-            cards[firstOptionId].setAttribute("src", "./assets/images/play-cards/card-back.png");
-            cards[secondOptionId].setAttribute("src", "./assets/images/play-cards/card-back.png");
+            cards[optionOneId].setAttribute("src", "./assets/images/play-cards/card-back.png");
+            cards[optionTwoId].setAttribute("src", "./assets/images/play-cards/card-back.png");
             movesCounter();
         }
         //remove chosen cards
-        cardsPicked = [];
-        cardsPickedId = [];
+        cardsChosen = [];
+        cardsChosenId = [];
 
         //score changes every time there is a match
-        score.textContent = cardsCorrect.length;
+        score.textContent = cardsRight.length;
 
         //message when all cards are matched
 
-        if(cardsCorrect.lenght === cardList.lenght/2) {
+        if (cardsRight.length === cardList.length/2) {
             document.getElementById("message").innerHTML = "Well done, you matched all cards!";
+           }
+ 
         }
-
-    }
 
     //flip cards when user selects them
     function flipCard() {
         let cardId = this.getAttribute("data-id");
-        cardsPicked.push(cardList[cardId].name);
-        cardsPickedId.push(cardId);
+        cardsChosen.push(cardList[cardId].name);
+        cardsChosenId.push(cardId);
         this.setAttribute("src", cardList[cardId].img);
-        if (cardsPicked.lenght === 2) {
-            setTimeout(checkMatch, 100);
+        if (cardsChosen.length === 2) {
+            setTimeout(checkMatch, 300);
         }
     }
 
    //reset the game
 
-   reset.addEventListener("click", resetEverything);
-   function resetEverything() {
+    reset.addEventListener("click", resetEverything);
+    function resetEverything() {
        playground.innerHTML = "";
        document.getElementById("message").innerHTML = "";
        cardList.sort(() => 0.5 - Math.random());
        createPlayground(playground, cardList);
-       cardsCorrect = [];
+       cardsRight = [];
        score.innerHTML = 0;
-       cardsPicked = [];
-       cardsPickedId = [];
+       cardsChosen = [];
+       cardsChosenId = [];
        movesCount.innerHTML = 0;
        moves = 0;
    }
     
    //moves counter
-   function movesCounter () {
+    function movesCounter () {
        movesCount.innerHTML ++;
        moves ++;
    }

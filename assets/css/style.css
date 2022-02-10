@@ -19,13 +19,13 @@ h2, .rules, .points {
     font-size: larger;
 }
 
-#grade {
+#score {
     
     font-size: x-large;
     text-align: center;
 }
 
-.points {
+.scores {
     display: inline-block;
     
 
@@ -48,7 +48,7 @@ h2, .rules, .points {
 footer {
     text-align: center;
 }
-.play-card {
+.game-card {
     width:120px;
     height:140px;
 }
