@@ -57,6 +57,7 @@ footer {
 .play-card {
     width:80px;
     height:90px;
+    border: 1.5px solid black;
     
 }
 @media (max-width:480px) {
