@@ -46,6 +46,10 @@ h2, .rules, .points {
     padding: 10px 15px 10px 15px;
     font-family: Kanit;
 }
+#reset-button:hover {
+    background-color: white;
+    color: gray;
+}
 footer {
     text-align: center;
 }
