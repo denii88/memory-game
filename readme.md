@@ -50,3 +50,13 @@ It is divided on three smaller sections,one for the first time users, one for th
 * I confirm that is easy to navigate the page and the rules are clearly stated.
 * I confirm that the colors and fonts are easy to see and easy to read.
 
+### Testing with Lighthouse
+
+* I have tested my app for the mobile devices and desktop over the Lighthouse dev tool and those are my results.
+* Mobile :
+
+![mobile](./assets/images/readme-images/mobile.png)
+
+* Desktop :
+
+![desktop](./assets/images/readme-images/desktop.png)
