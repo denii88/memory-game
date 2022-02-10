@@ -109,6 +109,6 @@ function movesCounter () {
 ## Credits 
 
 * I had issues with writing functions and they did't work so I had to implement some if other's functions into my work.
-* In any case I didn't cpoy/paste anyone elses work, I used my ids and clases and elements.
+* In any case of didn't cpoy/paste anyone elses work, I used my ids and clases and elements.
 * Mostly I was using Stackoverflow, CodePen and user Jacob Oakley,
 software developer Ania Kubow, and the git hub user michelle 3334.
