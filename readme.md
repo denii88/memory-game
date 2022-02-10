@@ -42,3 +42,11 @@ It is divided on three smaller sections,one for the first time users, one for th
 ## Features left to implement 
 
 * I would like to make bigger game for the desktop,I have tried putting 20 cards on the table,but it was just too big and messy,especially for the mobile users as the icons were too small and it was too many of them.
+
+## Testing
+
+* I have tested the web app on three different browsers whhich inculde Chrome,Explorer and Firefox.
+* I confirm that the result is always correct.
+* I confirm that is easy to navigate the page and the rules are clearly stated.
+* I confirm that the colors and fonts are easy to see and easy to read.
+
