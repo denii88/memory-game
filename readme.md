@@ -60,3 +60,39 @@ It is divided on three smaller sections,one for the first time users, one for th
 * Desktop :
 
 ![desktop](./assets/images/readme-images/desktop.png)
+
+## Bugs
+
+### Solved bugs
+
+* Had problems that all the cards were opening without match, I missused query selectors and id's 
+
+* Moves and score table didn't react to gameplay,it was actually really simple and I found the answer on stackoverflow : 
+
+function movesCounter () {
+       movesCount.innerHTML ++;
+       moves ++;
+
+### Unsolved bugs
+
+* I noticed on the end that I can press one card 2 times. It is not bad because the game counts as you played twice and just flips cards back, but maybe for future is something that is for to look up.
+
+## Validator testing
+
+1. HTML
+
+* No errors were returned when I put my code through the official W3C validator.
+
+
+2. CSS
+
+* No errors were found when I put my code through the official (Jigsaw) validator.
+
+3. JS
+
+* No errors were found when I put my code through JS Hint, Javascript validator.
+
+
+## Deployment
+
+*
