@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
     //constants for the game,moves,score and reset
 
     const playground = document.querySelector("#playground");
-    const score = document.querySelector("#result");
+    const grade = document.querySelector("#total");
     const movesCount = document.querySelector("#moves");
     const reset = document.getElementById("reset-button");
     let moves = 0;
 
-    let cardsChosen = [];
-    let cardsChosenId = [];
-    let cardsRight = [];
+    let cardsPicked = [];
+    let cardsPickedId = [];
+    let cardsCorrect = [];
 
     //setting attributes,iteration and adding back of the card,creating new element of image of card back
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < cardList.length; i++) {
             const card = document.createElement("img");
             card.setAttribute("src", "./assets/images/play-cards/card-back.png");
-            card.setAttribute("class", "game-card");
+            card.setAttribute("class", "play-card");
             card.setAttribute("data-id", i);
             card.addEventListener("click", flipCard);
             playground.appendChild(card);
@@ -84,29 +84,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function checkMatch () {
         const cards = document.querySelectorAll("img");
-        const optionOneId = cardsChosenId[0];
-        const optionTwoId = cardsChosenId[1];
+        const firstOptionId = cardsPickedId[0];
+        const secondOptionId = cardsPickedId[1];
 
-        if (cardsChosen[0] === cardsChosen[1] && cardsChosenId[0] !== cardsChosenId[1]) {
-            cards[optionOneId].removeEventListener("click", flipCard);
-            cards[optionTwoId].removeEventListener("click", flipCard);
-            cardsRight.push(cardsChosen);
+        if (cardsPicked[0] === cardsPicked[1] && cardsPickedId[0] !== cardsPickedId[1]) {
+            cards[firstOptionId].removeEventListener("click", flipCard);
+            cards[secondOptionId].removeEventListener("click", flipCard);
+            cardsCorrect.push(cardsPicked);
             movesCounter();
         } else {
-            cards[optionOneId].setAttribute("src", "./assets/images/play-cards/card-back.png");
-            cards[optionTwoId].setAttribute("src", "./assets/images/play-cards/card-back.png");
+            cards[firstOptionId].setAttribute("src", "./assets/images/play-cards/card-back.png");
+            cards[secondOptionId].setAttribute("src", "./assets/images/play-cards/card-back.png");
             movesCounter();
         }
         //remove chosen cards
-        cardsChosen = [];
-        cardsChosenId = [];
+        cardsPicked = [];
+        cardsPickedId = [];
 
         //score changes every time there is a match
-        score.textContent = cardsRight.length;
+        grade.textContent = cardsCorrect.length;
 
         //message when all cards are matched
 
-        if (cardsRight.length === cardList.length/2) {
+        if (cardsCorrect.length === cardList.length/2) {
             document.getElementById("message").innerHTML = "Well done, you matched all cards!";
            }
  
@@ -115,11 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //flip cards when user selects them
     function flipCard() {
         let cardId = this.getAttribute("data-id");
-        cardsChosen.push(cardList[cardId].name);
-        cardsChosenId.push(cardId);
+        cardsPicked.push(cardList[cardId].name);
+        cardsPickedId.push(cardId);
         this.setAttribute("src", cardList[cardId].img);
-        if (cardsChosen.length === 2) {
-            setTimeout(checkMatch, 300);
+        if (cardsPicked.length === 2) {
+            setTimeout(checkMatch, 500);
         }
     }
 
@@ -131,10 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
        document.getElementById("message").innerHTML = "";
        cardList.sort(() => 0.5 - Math.random());
        createPlayground(playground, cardList);
-       cardsRight = [];
-       score.innerHTML = 0;
-       cardsChosen = [];
-       cardsChosenId = [];
+       cardsCorrect = [];
+       grade.innerHTML = 0;
+       cardsPicked = [];
+       cardsPickedId = [];
        movesCount.innerHTML = 0;
        moves = 0;
    }
